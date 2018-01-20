@@ -59,7 +59,7 @@ function sumAndMultiply(a, b, c) {
     var addString = ("4 and 7 and 5 sum to 16.");
     var multiplyString = ("The product of 4 and 7 and 5 is 140");
         return[numbersSum, productsSum, addString, multiplyString];
-}
+} 
 sumAndMultiply(4, 7, 5);
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
