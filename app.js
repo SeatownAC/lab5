@@ -30,8 +30,8 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) {
     var times = (a * b);
-    var message = ("The product of 5 and 9 is 45.");
-    return [multiply, message];
+    var message = ("The product of " + a + " and " + b + " is " + times + ".");
+    return [times, message];
   //eslint-disable-line
 }
 multiply(5, 9);
@@ -56,7 +56,7 @@ Test this function by hand in the console to get it working, and when you think 
 function sumAndMultiply(a, b, c) {
     var numbersSum = sum(a, b)[0];
     var productsSum = multiply(a, b)[0];
-
+   
     var sumOfThree = sum(numbersSum, c);
     var productOfThree = multiply(productsSum, c);
 
@@ -64,9 +64,10 @@ function sumAndMultiply(a, b, c) {
     var finalProduct = productOfThree[0];
 
 
-    var addString = ("' a + 'and ' + b 'and ' + c  + 'sum to ' + finalSum '.' ");
-    var multiplyString = ("The product of a ' and ' + b ' and ' + c  + ' is' finalProduct '.' ");
-        return[finalSum, finalProduct, addString, multiplyString];
+    var addString = ( a + ' and ' + b + ' and ' + c  + ' sum to ' + finalSum + '.');
+    var multiplyString = ('The product of ' + a +  ' and ' +  b + ' and ' + c  + ' is '+ finalProduct + '.');
+        var message = [finalSum, finalProduct, addString, multiplyString];
+        return message;
 } 
 sumAndMultiply(4, 7, 5);
 
@@ -89,11 +90,7 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(testArray) {
-    var num1 = ("a");
-    var num2 = ("b");
-    var num3 = ("c");
-    sum (a, b, c);
-
+    
   //eslint-disable-line
 }
 sumArray(2, 3, 4);
