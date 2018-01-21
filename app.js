@@ -9,11 +9,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) {
-    var add = (a + b);
-    var msg = ("The sum of 4 and 7 is 11.");
+    var add = a + b;
+    var msg = 'The sum of ' + a + ' and ' +  b + ' is ' + add + '.';
     return [add, msg];
 }
-sum(4, 7);
+sum(44, 347);
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
 
@@ -54,11 +54,19 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-    var numbersSum = sum(sum(a, b)[0],  c[0]);
-    var productsSum = multiply(multiply(a, b)[0],  c[0]);
-    var addString = ("4 and 7 and 5 sum to 16.");
-    var multiplyString = ("The product of 4 and 7 and 5 is 140");
-        return[numbersSum, productsSum, addString, multiplyString];
+    var numbersSum = sum(a, b)[0];
+    var productsSum = multiply(a, b)[0];
+
+    var sumOfThree = sum(numbersSum, c);
+    var productOfThree = multiply(productsSum, c);
+
+    var finalSum = sumOfThree[0];
+    var finalProduct = productOfThree[0];
+
+
+    var addString = ("' a + 'and ' + b 'and ' + c  + 'sum to ' + finalSum '.' ");
+    var multiplyString = ("The product of a ' and ' + b ' and ' + c  + ' is' finalProduct '.' ");
+        return[finalSum, finalProduct, addString, multiplyString];
 } 
 sumAndMultiply(4, 7, 5);
 
